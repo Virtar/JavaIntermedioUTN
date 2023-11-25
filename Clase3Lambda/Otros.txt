@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package clase3ej1;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+/**
+ *
+ * @author IvanMR
+ */
+public class Clase3ej1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        ArrayList<String> cadena = new ArrayList();
+//        ArrayList<String> cadenaM = new ArrayList();
+        
+        cadena.add("hola");
+        cadena.add("que");
+        cadena.add("tal");
+        cadena.add("estas");
+        cadena.add("hoy");
+        
+        ArrayList<String> cadenaM = new ArrayList<> (cadena.stream().map((str) -> str.toUpperCase()).collect(Collectors.toList()));
+//        cadena.forEach((str) -> cadenaM.add(str.toUpperCase()));
+        System.out.println(cadenaM);
+        
+    }
+    
+}
+--------------------------------------------------------------------------------------
+yo hice List<String> listaNueva = lista.stream().map((cadena)->cadena.toUpperCase()).collect(Collectors.toList());
+-------------------------------------------------------------------public class Mayuscula {
+    public static List<String> listaMayusculas (List<String> strings){
+        return strings.stream().map(string -> string.toUpperCase()).collect(Collectors.toList());
+    }
+}--------------------

@@ -1,0 +1,16 @@
+private static String concatenarLista (ArrayList<String> cadena, int n){
+        
+        String str = String.join(", ", cadena.stream().filter(s -> s.length()>n).collect(Collectors.toList()));
+        
+        
+        return str;
+    }
+
+------------------------------------------------------------------------
+private static String concatenarLista (ArrayList<String> cadena, int n){
+        
+        String str = String.join(", ", cadena.stream().filter(s -> s.length()>n).collect(Collectors.toList()));
+        
+        
+        return str;
+    }
