@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.Set;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -24,55 +26,8 @@ public class Tecnico {
     @Column(nullable = false, length = 20)
     private String telefono;
     @OneToMany
-    private ArrayList<Especialidad> especialidades;
+    private Set<Especialidad> especialidades;
     @OneToMany
-    private ArrayList<Incidente> incidentes;
+    private Set<Incidente> incidentes;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public ArrayList<Especialidad> getEspecialidades() {
-        return especialidades;
-    }
-
-    public void setEspecialidades(ArrayList<Especialidad> especialidades) {
-        this.especialidades = especialidades;
-    }
-
-    public ArrayList<Incidente> getIncidentes() {
-        return incidentes;
-    }
-
-    public void setIncidentes(ArrayList<Incidente> incidentes) {
-        this.incidentes = incidentes;
-    }
 }
